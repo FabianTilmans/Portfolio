@@ -173,6 +173,61 @@ ul.skill-list>li::marker {
   transition: background-image 0.25s ease;
 }
 
+form {
+  display: block;
+  width: 60%;
+}
+
+.text-input {
+  margin: 1rem 0;
+}
+
+label {
+  margin-bottom: 0.25rem;
+}
+
+input,
+label {
+  display: block;
+}
+
+input {
+  padding: 0.75rem;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--system-color-accent);
+  color: var(--system-color-shade);
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name>.text-input {
+  flex-grow: 1;
+}
+
+.form-margin {
+  margin-right: 1rem;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid var(--system-color-accent);
+  color: var(--system-color-shade);
+}
+
+.submit {
+  background-color: var(--system-color-accent);
+  color: var(--system-color-shade);
+}
+
+
 @media only screen and (min-width: 768px) {
   .intro {
     display: flex;

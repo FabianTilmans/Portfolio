@@ -105,7 +105,28 @@
   </section>
   <section id="projects">
     <h2 class="section-header">Contact</h2>
-    <h1 class="project-info"><span>&lt&lt</span>Nothing To Show YET<span>&gt&gt</span></h1>
+    <form action="https://formsubmit.co/info@fabiantilmans.dev" method="POST" name="contactForm">
+      <div class="name">
+        <div class="text-input form-margin">
+          <label for="firstname">Vorname</label>
+          <input id="firstname" name="firstname" type="text" />
+        </div>
+        <div class="text-input">
+          <label for="lastname">Nachname</label>
+          <input id="lastname" name="lastname" type="text" />
+        </div>
+      </div>
+      <div class="text-input">
+        <label for="email">E-Mail</label>
+        <input id="email" type="email" name="email">
+      </div>
+      <div class="text-input">
+        <label for="email">E-Mail</label>
+        <textarea name="info-text" cols="40" rows="5"></textarea>
+      </div>
+
+      <input type="submit" class="submit" onclick="resetForm()" value="Get in Touch!" />
+    </form>
   </section>
 </body>
 
