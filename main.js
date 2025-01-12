@@ -13,3 +13,7 @@
     document.documentElement.className = newTheme;
   });
 })();
+
+resetForm = () => {
+  document.contactForm.reset();
+}
