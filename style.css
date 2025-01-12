@@ -15,6 +15,13 @@
   --system-font-size-h2: 32px;
   --system-font-size-h3: 26px;
   --system-font-size-h3: 22px;
+  --system-image-theme: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="%23000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><g clip-path="url(%23a)" stroke="%23a8adb2" stroke-width="1.5" stroke-miterlimit="10"><path d="M5 12H1M23 12h-4M7.05 7.05 4.222 4.222M19.778 19.778 16.95 16.95M7.05 16.95l-2.828 2.828M19.778 4.222 16.95 7.05" stroke-linecap="round"></path><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" fill="%23a8adb2" fill-opacity=".16"></path><path d="M12 19v4M12 1v4" stroke-linecap="round"></path></g><defs><clipPath id="a"><path fill="%23edf2f9" d="M0 0h24v24H0z"></path></clipPath></defs></g></svg>');
+}
+
+html.light-theme {
+  --system-color-main: #fbfbfc;
+  --system-color-shade: #0c0f11;
+  --system-image-theme: url('data:image/svg+xml,<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.39703 11.6315C3.39703 16.602 7.42647 20.6315 12.397 20.6315C15.6858 20.6315 18.5656 18.8664 20.1358 16.23C16.7285 17.3289 12.6922 16.7548 9.98282 14.0455C7.25201 11.3146 6.72603 7.28415 7.86703 3.89293C5.20697 5.47927 3.39703 8.38932 3.39703 11.6315ZM21.187 13.5851C22.0125 13.1021 23.255 13.6488 23 14.5706C21.7144 19.2187 17.4543 22.6315 12.397 22.6315C6.3219 22.6315 1.39703 17.7066 1.39703 11.6315C1.39703 6.58874 4.93533 2.25845 9.61528 0.999986C10.5393 0.751502 11.0645 1.99378 10.5641 2.80935C8.70026 5.84656 8.83194 10.0661 11.397 12.6312C13.9319 15.1662 18.1365 15.3702 21.187 13.5851Z" fill="%230F0F0F"></path></g></svg>');
 }
 
 * {
@@ -44,7 +51,7 @@ header {
 a {
   text-decoration: none;
   color: var(--system-color-shade);
-  transition: 0.4s all;
+  transition: color 0.4s all;
 }
 
 h4 {
@@ -83,7 +90,7 @@ section {
   display: flex;
 }
 
-.socials-item {
+.socials-item>a {
   display: flex;
   font-size: var(--system-font-size-default);
   align-items: center;
@@ -151,8 +158,30 @@ ul.skill-list>li::marker {
   color: var(--system-color-accent);
 }
 
+.theme-switcher {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  color: var(--system-color-main);
+  cursor: pointer;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  background-image: var(--system-image-theme);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 0.25s ease;
+}
+
 @media only screen and (min-width: 768px) {
   .intro {
     display: flex;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --system-color-main: #fbfbfc;
+    --system-color-shade: #0c0f11;
   }
 }
