@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --system-color-main: #fbfbfc;
+  --system-color-shade: #a8adb2;
+  --system-color-secondary: #141614;
+  --system-color-main: #0c0f11;
+  --system-color-accent: #412bb4;
+  --system-color-accent2: #8f42ff;
+  --system-color-accent2: #2cb7fc;
+  --system-color-accent3: #77d7af;
+
+  --system-font-size-default: 20px;
+  --system-font-size-h1: 40px;
+  --system-font-size-h2: 32px;
+  --system-font-size-h3: 26px;
+  --system-font-size-h3: 22px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Funnel Sans", serif;
+  background-color: var(--system-color-main);
+}
+
+header {
+  display: flex;
+  max-width: 52rem;
+  padding: 2rem 0;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--system-color-shade);
+  transition: 0.4s all;
+}
+
+h4 {
+  font-size: var(--system-font-size-h3);
+}
+
+.title {
+  font-size: var(--system-font-size-h3);
+}
+
+section {
+  max-width: 52rem;
+  margin: auto;
+  padding: 4rem 0;
+  color: var(--system-color-shade);
+}
+
+.intro {
+  width: 100%;
+  display: block;
+  align-items: center;
+  color: var(--system-color-shade);
+}
+
+.intro-right {
+  font-size: var(--system-font-size-h2);
+}
+
+
+.intro-salut {
+  color: var(--system-color-accent);
+}
+
+.socials {
+  margin-top: 0.5rem;
+  display: flex;
+}
+
+.socials-item {
+  display: flex;
+  font-size: var(--system-font-size-default);
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.socials-item>svg {
+  margin-right: 0.25rem;
+}
+
+img.profile {
+  width: 10rem;
+  margin-right: 2rem;
+}
+
+.section-header {
+  color: var(--system-color-shade);
+  font-size: var(--system-font-size-h2);
+  text-decoration: underline;
+  text-decoration-color: var(--system-color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.section-content {
+  color: var(--system-color-shade);
+  font-size: var(--system-font-size-default);
+}
+
+.section-content>span>a {
+  text-decoration: underline;
+  text-decoration-color: var(--system-color-accent);
+}
+
+a:hover {
+  color: var(--system-color-accent);
+  transition: 0.4s all;
+}
+
+h4 {
+  margin-bottom: 1rem;
+}
+
+ul.skill-list {
+  margin-bottom: 3rem;
+  margin-left: 1rem;
+}
+
+ul.skill-list.last {
+  margin-bottom: 0;
+}
+
+ul.skill-list>li:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+ul.skill-list>li::marker {
+  color: var(--system-color-accent);
+}
+
+.project-info {
+  margin: 4rem 0 0 0;
+}
+
+.project-info>span {
+  color: var(--system-color-accent);
+}
+
+@media only screen and (min-width: 768px) {
+  .intro {
+    display: flex;
+  }
+}
