@@ -37,6 +37,7 @@ html {
 body {
   font-family: "Funnel Sans", serif;
   background-color: var(--system-color-main);
+  padding: 0 2rem;
 }
 
 header {
@@ -71,7 +72,10 @@ section {
 
 .intro {
   width: 100%;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   color: var(--system-color-shade);
 }
@@ -88,6 +92,7 @@ section {
 .socials {
   margin-top: 0.5rem;
   display: flex;
+  justify-content: center;
 }
 
 .socials-item>a {
@@ -227,10 +232,31 @@ textarea {
   color: var(--system-color-shade);
 }
 
+.contact-button {
+  padding: 0.75rem 1rem;
+  background-color: var(--system-color-accent);
+  border-radius: 8px;
+  color: var(--system-color-shade);
+}
+
+.contact-button:hover {
+  color: var(--system-color-shade);
+}
+
 
 @media only screen and (min-width: 768px) {
+
+  body {
+    padding: 0;
+  }
+
   .intro {
-    display: flex;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .socials {
+    justify-content: left;
   }
 }
 
